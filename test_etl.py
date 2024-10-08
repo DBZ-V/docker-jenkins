@@ -14,7 +14,7 @@ def test_extract_data():
 def test_transform_data():
     data = pd.DataFrame({
         'employee_id': [101, 102],
-        'employee_name': ['Alice', 'Bob'],
+        'employee_name': ['Alice', 'Claire'],
         'salary': [5000, 6000]
     })
     
