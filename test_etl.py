@@ -5,7 +5,7 @@ from etl_process import extract_data, transform_data, load_data
 
 # Test for data extraction
 def test_extract_data():
-    csv_data = StringIO("employee_id,employee_name,salary\n101,Alice,5000\n102,Bob,6000")
+    csv_data = StringIO("employee_id,employee_name,salary\n101,Terence,5000\n102,Phillip,6000")
     data = pd.read_csv(csv_data)
     assert data is not None
     assert len(data) == 2
@@ -14,7 +14,7 @@ def test_extract_data():
 def test_transform_data():
     data = pd.DataFrame({
         'employee_id': [101, 102],
-        'employee_name': ['Alice', 'Claire'],
+        'employee_name': ['Terence', 'Phillip'],
         'salary': [5000, 6000]
     })
     
@@ -28,7 +28,7 @@ def test_transform_data():
 def test_load_data(tmpdir):
     data = pd.DataFrame({
         'employee_id': [101],
-        'employee_name': ['Alice'],
+        'employee_name': ['Terence'],
         'salary': [5000],
         'tax': [500],
         'net_salary': [4500]
@@ -39,5 +39,5 @@ def test_load_data(tmpdir):
     loaded_data = pd.read_csv(output_file)
     
     assert len(loaded_data) == 1
-    assert loaded_data['employee_name'][0] == 'Alice'
+    assert loaded_data['employee_name'][0] == 'Terence'
     assert loaded_data['net_salary'][0] == 4500
