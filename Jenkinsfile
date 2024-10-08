@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url:'https://github.com/JedhaBootcamp/paycare-jenkins-solution.git'
+                git branch: 'main', url:'https://github.com/DBZ-V/docker-jenkins.git'
             }
         }
 
