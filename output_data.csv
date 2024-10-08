@@ -1,0 +1,3 @@
+employee_id,employee_name,salary,tax,net_salary
+101,Welt,5000,500.0,4500.0
+102,Himeko,7000,700.0,6300.0
